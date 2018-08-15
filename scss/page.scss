@@ -1,0 +1,191 @@
+/**
+ * @author      ZEUS Design <service@zeusdesign.com.tw>
+ * @copyright   Copyright (c) 2015 - 2018, OAF2E
+ * @license     http://opensource.org/licenses/MIT  MIT License
+ * @link        https://www.zeusdesign.com.tw
+ */
+
+@import "_oa";
+
+$maxWidth: 1110px;
+.header_banner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .title {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    // background-color: rgba(87, 63, 139, 0.69);
+
+    span {
+      color: white;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 200px;
+    }
+  }
+}
+
+.guide {
+  background-color: rgba(240, 240, 240, 1.00);
+  .guide_box {
+    display: inline-block;
+    width: 100%;
+    max-width: $maxWidth;
+    height: 50px;
+    padding: 0 10px 0 10px;
+    @include clearfix();
+    @include range-width(0, 725px) {
+      padding-left: 10px;
+    }
+    > a {
+      line-height: 50px;
+      color: rgba(88, 88, 88, 1.00);
+      text-decoration: none;
+      float: left;
+
+      @include range-width(0, 750px) {
+        font-size: 13px;
+      }
+
+      &:after {
+        content: '>';
+        display: inline-block;
+        width: 23px;
+      }
+
+      &:last-child:after {
+        content: '';
+      }
+    }
+
+  }
+}
+
+$sideMenu: 280px;
+.page {
+  display: inline-block;
+  width: 100%;
+  max-width: $maxWidth;
+  padding: 50px 10px 50px 10px;
+
+  @include range-width(0, 725px) {
+    padding-top: 10px;
+  }
+
+  > * {
+    display: inline-block;
+    float: left;
+  }
+  .page_left {
+    width: $sideMenu;
+    @include range-width(0, 725px) {
+      width: 100%;
+      padding: 20px;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      font-size: 18px;
+      text-align: left;
+      text-decoration: none;
+      margin-bottom: 20px;
+      padding-left: 10px;
+      color: #2d2d2d;
+      @include border-radius(5px);
+
+      &.active {
+        color: white;
+        background-color: rgba(102, 47, 204, 1.00);
+      }
+
+      &:hover {
+        color: white;
+        background-color: rgba(102, 47, 204, 0.7);
+      }
+    }
+  }
+
+  .page_right {
+    width: calc( 100% - #{$sideMenu} );
+    padding-left: 100px;
+    height: auto;
+
+    @include range-width(0, 725px) {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .page_detail {
+      h1 {
+        font-size: 20px;
+        color: rgba(57, 34, 119, 1.00);
+        span {
+          display: block;
+          text-align: left;
+
+          &.page_big {
+            font-size: 30px;
+          }
+        }
+      }
+
+      article {
+        p {
+          line-height: 28px;
+
+          &.small_13 {
+            font-size: 13px;
+            line-height: 22px;
+          }
+        }
+        a {
+          color: rgba(76, 156, 229, 1.00);
+          @include a(1px, true);
+        }
+        display: inline-block;
+        text-align: left;
+        color: #2d2d2d;
+
+        b {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+
+.ok {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  padding: 5px 20px;
+  cursor: pointer;
+  @include border-radius(2px);
+  background-color: rgba(91, 42, 197, 1.00);
+  color: white !important;
+  font-size: 18px;
+  font-weight: 600;
+
+  &:hover, &:active {
+    background-color: rgba(91, 42, 197, .9);
+  }
+}

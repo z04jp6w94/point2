@@ -1,0 +1,353 @@
+/**
+ * @author      ZEUS Design <service@zeusdesign.com.tw>
+ * @copyright   Copyright (c) 2015 - 2018, OAF2E
+ * @license     http://opensource.org/licenses/MIT  MIT License
+ * @link        https://www.zeusdesign.com.tw
+ */
+
+@import "_oa";
+
+body {
+  margin: 0;
+  border-top: 5px solid rgba(107, 108, 111, 1.00);
+}
+
+
+.in_boxs {
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  margin: 40px 0;
+
+    // @include range-width(0, 600px) {
+    //   padding: 0 10px;
+    // }
+
+  .mo_boxs {
+    display: inline-block;
+    width: 100%;
+
+    .in_top {
+      display: inline-block;
+      width: 100%;
+
+      .in_type {
+        display: inline-block;
+        width: calc(100% - 95px);
+
+        span {
+          display: inline-block;
+          width: 100%;
+          font-size: 30px;
+          color: rgba(101, 53, 101, 1.00);
+          text-align: left;
+
+          &:nth-child(2) {
+            font-size: 15px;
+            margin-bottom: 10px;
+          }
+
+          // @include range-width(0, 450px) {
+          //   font-size: 20px;
+          // }
+        }
+      }
+
+      a {
+        display: inline-block;
+        float: right;
+        width: 100%;
+        max-width: 95px;
+        cursor: pointer;
+        text-decoration: none;
+
+        img {
+          display: inline-block;
+          width: 100%;
+          max-width: 95px;
+        }
+      } 
+    }
+
+    .border_boxs {
+      display: inline-block;
+      width: 100%;
+      @include clearfix();
+
+      > div {
+        display: inline-block;
+        width: calc(100% / 3);
+        height: 10px;
+        float: left;
+
+        &:nth-child(1) {background-color: rgba(101, 53, 101, 1.00);}
+        &:nth-child(2) {background-color: rgba(153, 152, 105, 1.00);}
+        &:nth-child(3) {background-color: rgba(102, 103, 151, 1.00);}
+      }
+    }
+
+    .in_note {
+      display: inline-block;
+      width: 100%;
+      border-bottom: 1px dotted rgba(107, 108, 111, .3);
+
+      .in_note_l {
+        display: inline-block;
+        width: 65%;
+        float: left;
+        text-align: left;
+
+        // @include range-width(0, 450px) {
+        //   width: 100%;
+        // }
+
+        p {
+          display: inline-block;
+          width: 100%;
+          padding: 0 0 3px 0;
+          margin: 0;
+          font-size: 13px;
+          color: rgba(101, 53, 101, 1.00);
+
+          b {
+            display: inline-block;
+            font-size: 13px;
+            color: rgba(101, 53, 101, 1.00);
+          }
+
+          a {
+            display: inline-block;
+            font-size: 13px;
+            color: rgba(101, 53, 101, 1.00);
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .in_note_r {
+        display: inline-block;
+        width: 35%;
+        float: right;
+        text-align: right;
+
+        // @include range-width(0, 450px) {
+        //   width: 100%;
+        //   text-align: left;
+        //   border-bottom: 1px dotted rgba(107, 108, 111, .3);
+        //   padding-bottom: 10px;
+        //   margin-bottom: 10px;
+        // }
+
+        .big_type {
+          display: inline-block;
+          width: 100%;
+          font-size: 30px;
+          color: rgba(101, 53, 101, 1.00);
+
+          &:nth-child(2) {
+            font-size: 20px;
+          }
+
+          &:nth-child(3) {
+            color: rgba(153, 151, 107, 1.00);
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .in_name_boxs {
+      display: inline-block;
+      width: 100%;
+      padding: 20px 0;
+      text-align: left;
+      border-bottom: 1px dotted rgba(107, 108, 111, .3);
+
+      .in_name_box {
+        display: inline-block;
+        width: calc(100% / 2);
+        float: left;
+
+        // @include range-width(0, 450px) {
+        //   width: 100%;
+        // }
+
+        b, .in_name {
+          display: inline-block;
+          float: left;
+          width: 50%;
+          font-size: 13px;
+          color: black;
+          line-height: 20px;
+          padding-bottom: 3px;
+        }
+
+        &:last-child {
+          .in_name_box {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .in_table_boxs {
+      display: inline-block;
+      width: 100%;
+      margin: 20px 0;
+      @include clearfix();
+      border: 1px solid rgba(166, 166, 166, .5);
+      
+      // @include range-width(0, 450px) {
+      //   display: none;
+
+      //   &.opt {
+      //     display: inline-block;
+      //   }
+      // }
+
+      .table3 {
+        display: inline-block;
+        width: calc(100% / 3);
+        float: left;
+
+        // @include range-width(0, 520px) {
+        //   width: 100%;
+        // }
+
+        &.have_tb {
+          border-top: 1px solid rgba(166, 166, 166, .5);
+          float: right;
+        }
+
+        &.table15 {
+          width: 18%;
+        }
+
+        &.table36 {
+          width: 36%;
+        }
+
+        &.table40 {
+          width: 28%;
+        }
+
+        > div {
+          display: inline-block;
+          width: 100%;
+          font-size: 13px;
+          color: black;
+          line-height: 30px;
+          height: 30px;
+          border-left: 1px solid rgba(166, 166, 166, .5);
+          border-bottom: 1px solid rgba(166, 166, 166, .5);
+
+          &:nth-child(1) {
+            font-weight: 600;
+            background-color: rgba(242, 242, 242, 1.00);
+            border-bottom: 1px solid rgba(166, 166, 166, .5);
+          }
+
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+
+        &:first-child {
+          div {
+            border-left: 0;
+          }
+        }
+      }
+    }
+
+    .in_table_end {
+      display: inline-block;
+      width: 54%;
+      float: right;
+      border: 1px solid rgba(166, 166, 166, .5);
+      @include clearfix();
+
+      // @include range-width(0, 520px) {
+      //   width: 100%;
+      // }
+
+      &.mo_share {
+        display: none;
+        @include range-width(0, 450px) {
+          display: inline-block;
+          margin-top: 20px;
+          margin-bottom: 10px;
+
+          // .table66 {
+          //   > div {
+          //     &:last-child {
+          //       height: 50px;
+          //       line-height: 20px;
+          //       padding-top: 8px;
+          //     }
+          //   }
+            
+          //   &.table33 {
+          //     > div {
+          //       &:last-child {
+          //         height: 50px;
+          //         line-height: 20px;
+          //         padding-top: 8px;
+          //       }
+          //     }
+          //   }
+          // }
+        }
+      }
+      
+      .table66 {
+        display: inline-block;
+        width:65%;
+        float: left;
+
+        &.table33 {
+          width:35%;
+
+          > div {
+            border-left: 1px solid rgba(166, 166, 166, .5);
+            background-color: white;
+            text-align: center;
+            padding-right: 0;
+          }
+        }
+
+        > div {
+          display: inline-block;
+          width: 100%;
+          font-size: 13px;
+          color: black;
+          line-height: 30px;
+          height: 30px;
+          border-bottom: 1px solid rgba(166, 166, 166, .5);
+          background-color: rgba(242, 242, 242, 1.00);
+          text-align: right;
+          padding-right: 10px;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+

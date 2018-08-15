@@ -1,0 +1,122 @@
+@import "_oa";
+
+@include font-face("icomoon", font-files("icomoon/fonts/icomoon.eot", "icomoon/fonts/icomoon.woff", "icomoon/fonts/icomoon.ttf", "icomoon/fonts/icomoon.svg"));
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal;
+  @include font-smoothing(antialiased);
+}
+
+.icon-calendar2:before {
+  content: "\e91d";
+}
+.icon-clock3:before {
+  content: "\e91e";
+}
+.icon-medal-01:before {
+  content: "\e919";
+}
+.icon-pay:before {
+  content: "\e91a";
+}
+.icon-headphones:before {
+  content: "\e91b";
+}
+.icon-trophy-01:before {
+  content: "\e91c";
+}
+.icon-user:before {
+  content: "\e900";
+}
+.icon-envelope:before {
+  content: "\e901";
+}
+.icon-clock:before {
+  content: "\e902";
+}
+.icon-lock:before {
+  content: "\e903";
+}
+.icon-user2:before {
+  content: "\e904";
+}
+.icon-align-justify:before {
+  content: "\e90d";
+}
+.icon-book:before {
+  content: "\e90e";
+}
+.icon-check-circle:before {
+  content: "\e905";
+}
+.icon-check:before {
+  content: "\e918";
+}
+.icon-chevron-down:before {
+  content: "\e90a";
+}
+.icon-chevron-left:before {
+  content: "\e907";
+}
+.icon-chevron-right:before {
+  content: "\e908";
+}
+.icon-chevron-up:before {
+  content: "\e909";
+}
+.icon-clock2:before {
+  content: "\e906";
+}
+.icon-mail:before {
+  content: "\e911";
+}
+.icon-minus-circle:before {
+  content: "\e91f";
+}
+.icon-minus:before {
+  content: "\e90b";
+}
+.icon-phone:before {
+  content: "\e912";
+}
+.icon-plus-circle:before {
+  content: "\e920";
+}
+.icon-plus:before {
+  content: "\e90c";
+}
+.icon-user3:before {
+  content: "\e913";
+}
+.icon-x:before {
+  content: "\e910";
+}
+.icon-calendar:before {
+  content: "\e914";
+}
+.icon-tag:before {
+  content: "\e917";
+}
+.icon-cart:before {
+  content: "\e90f";
+}
+.icon-home:before {
+  content: "\e915";
+}
+.icon-pencil:before {
+  content: "\e916";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-star-empty:before {
+  content: "\e9d7";
+}
+.icon-star-full:before {
+  content: "\e9d9";
+}
+.icon-video-camera:before {
+  content: "\e921";
+}
+.icon-search:before {
+  content: "\e986";
+}
