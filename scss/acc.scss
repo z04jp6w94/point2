@@ -79,6 +79,7 @@
     }
   }
 }
+
 #acc-info {
   > div {
     > h1 {
@@ -414,7 +415,7 @@
             display: inline-block;
             width: calc(100% - 30px);
             margin: 15px 15px 0 15px;
-            padding: 0;
+            padding: 5px 0;
             border-top: 1px solid rgba(209, 209, 209, 1.00);
             border-bottom: 1px solid rgba(209, 209, 209, 1.00);
 
@@ -439,15 +440,15 @@
               input {
                 display: inline-block;
                 width: 80px;
-                padding: 3px 5px;
+                padding: 1px 5px;
               }
 
               button {
                 display: inline-block;
                 cursor: pointer;
                 width: 60px;
-                padding: 3px;
-                font-size: 14px;
+                padding: 2px;
+                font-size: 13px;
                 color: white;
                 border: 0;
                 float: right;
@@ -480,6 +481,7 @@
 
             &:nth-child(2) {
               margin-left: 20px;
+              text-transform: none;
             }
 
             &:hover, &:active {
@@ -493,7 +495,7 @@
               font-style: normal;
               border: 1px solid rgba(217, 217, 217, 1.00);
               color: white;
-              background-color: rgba(188, 188, 188, .5);
+              background-color: rgba(188, 188, 188, 1);
 
               &:nth-child(2) {
                 margin-left: 20px;
