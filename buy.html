@@ -19,6 +19,13 @@
     <script src="js/public.js" language="javascript" type="text/javascript" ></script>
     <script src="js/buy.js" language="javascript" type="text/javascript" ></script>
 
+    <!-- CSS for each example: -->
+    <link rel="stylesheet" type="text/css" href="css/example1.css" data-rel-css="" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" data-rel-css="" />
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="js/index.js" data-rel-js></script>
+
   </head>
   <body lang="zh-tw">
     
@@ -337,7 +344,7 @@
         <div class='pay'>
 
           <div class='pay_boxs'>
-            <a class='active'><img src="img/pay01.png"></a>
+            <a><img src="img/pay01.png"></a>
           </div>
 
           <div class='pay_boxs'>
@@ -357,19 +364,18 @@
           </div>
           
           <div class='pay_boxs'>
-            <a><img src="img/pay06.png"></a>
+            <a class='active'><img src="img/pay06.png"></a>
           </div>
 
           <div class='pay_boxs'>
             <a><img src="img/pay07.png"></a>
           </div>
 
-          <div class='pay_info show'>
+          <!-- zelle -->
+          <div class='pay_info'>
             <div class='p_info_box'>
               <span>Zelle 系統支付</span>
-              <p>只要您擁有美國各大銀行帳號，可以直接用您使用的銀行app轉帳免手續費（課程費用另折扣5%off），
-                可支援的銀行包含有：Bank of America, Chase, Citi, Capital One, U.S. Bank, Bank 
-                of the West, Wells Fargo, etc. 其他更多加入Zelle的銀行請參見：
+              <p>只要您擁有美國各大銀行帳號，可以直接用您使用的銀行app轉帳免手續費，可支援的銀行包含有：Bank of America, Chase, Citi, Capital One, U.S. Bank, Bank of the West, Wells Fargo, etc. 其他更多加入Zelle的銀行請參見：
                 <a href="https://www.zellepay.com/get-started" target="_blank">https://www.zellepay.com/get-started</a>
               </p>
 
@@ -377,12 +383,12 @@
                 <b>付款操作方式：(以Chase QuickPay 為例)</b>
                   </br><i>01 /</i> 進入您熟悉的美國銀行app並且找到Zelle支付功能，例如：打開Chase 銀行app 中在選單中選取QuickPay with Zelle。
                   </br>不知道自己銀行的app操作方式，請參考此網站<a href="https://www.zellepay.com/get-started" target="_blank">https://www.zellepay.com/get-started</a> 選擇自己使用的銀行按照提示操作。
-                  </br><i>02 /</i> 選擇『Send Money』→『Add recipient』→ 在Name欄位輸入Point Bar Review，email欄位輸入：payment@pointbarreview.com →『Add recipient』。
-                  </br><i>03 /</i> 回到『Send Money』，輸入顯示于本頁面上購物車上的總金額，並在備註欄寫上您的Point ID <i class='pay_note'>：可在您的 Account setting 中或是註冊信中看到</i>，並且按『Send money』。
+                  </br><i>02 /</i> 選擇【Send Money】→【Add recipient】→ 在Name欄位輸入Point Bar Review，email欄位輸入：payment@pointbarreview.com →【Add recipient】。
+                  </br><i>03 /</i> 回到【Send Money】，輸入顯示于本頁面上購物車上的總金額，並在備註欄寫上您的Point ID <i class='pay_note'>：可在您的 Account setting 中或是註冊信中看到</i>，並且按【Send money】。
                   </br><i>04 /</i> 將您收到的銀行確認信轉寄到 payment@pointbarreview.com 信箱。我們將于24小時內確認付款狀態並寄送確認信件。
               </div>
 
-              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將透過Zelle線上金流系統於三天內支付款項。</p>
             </div>
 
             <div class='p_info_box'>
@@ -391,6 +397,7 @@
             </div>
           </div>
 
+          <!-- 支付寶 -->
           <div class='pay_info'>
             <div class='p_info_box'>
               <span>支付寶</span>
@@ -399,7 +406,7 @@
                 <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
               </div>
               
-              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以支付寶線上金流系統支付款項。</p>
             </div>
 
             <div class='p_info_box'>
@@ -408,6 +415,7 @@
             </div>
           </div>
 
+          <!-- 微信支付 -->
           <div class='pay_info'>
             <div class='p_info_box'>
               <span>微信支付</span>
@@ -416,7 +424,7 @@
                 <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
               </div>
               
-              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以線微信支付線上金流系統支付款項。</p>
             </div>
 
             <div class='p_info_box'>
@@ -425,6 +433,7 @@
             </div>
           </div>
 
+          <!-- ATM -->
           <div class='pay_info'>
             <div class='p_info_box'>
               <span>ATM/Web ATM 轉帳 （僅限具有台灣的銀行帳號者使用）</span>
@@ -447,13 +456,19 @@
             </div>
           </div>
 
+          <!-- 智付寶 -->
           <div class='pay_info'>
             <div class='p_info_box'>
               <span>智付寶</span>
-              <p><img src="img/pay02_3.png">智付寶線上金流</p>
-              <p>智付寶線上金流系統提供信用卡（Visa, Master）以及銀聯卡刷卡功能，同時也提供台灣的超商條碼繳費功能。
-                 <br/>注意，針對大陸地區學員，目前尚未支援僅帶有人民幣和美金雙幣功能的信用卡，請使用帶有「銀聯卡」標誌的卡片，例如：銀聯卡、銀聯卡信用卡，並且在刷卡時選擇「銀聯卡」的分頁欄位輸入卡片資訊。
-                 <br/>如果您選擇使用這些付款方式，請勾選下面的方格，按下確認結帳後，網站將引導您跳轉至智付寶線上金流刷卡系統支付款項，以頁面上的新台幣價格結匯。</p>
+              <p><img src="img/pay02_3.png"><i>智付寶線上金流</i></p>
+
+              <div class='pay_mail'>
+                <b>付款操作方式：</b>
+                  </br><i>01 /</i> 智付通線上金流系統提供台灣信用卡（Visa, Master, JCB）線上刷卡功能，同時也提供台灣的超商條碼繳費功能，皆以新台幣結匯。。
+                  </br><i>02 /</i> 如果您欲選擇以這些付款方式，請勾選下面的方格，按下確認結帳後，網站將引導您跳轉至智付通線上金流系統支付款項，以頁面上的新台幣價格支付。
+              </div>
+
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，並同意馬上經由智付寶線上金流系統結帳。</p>
             </div>
 
             <div class='p_info_box'>
@@ -462,13 +477,68 @@
             </div>
           </div>
 
-          <div class='pay_info'>
+          <!-- stripe -->
+          <div class='pay_info show'>
             <div class='p_info_box'>
-              <span>支付寶</span>
-              <p>因為有匯率浮動問題，需要使用支付寶或微信支付的學員，請來信索取支付寶/微信支付收款QRcode。匯率以索取QRcode當天匯率中價來計算。</p>
-              <div class='pay_mail'>請留下信箱，索取QRcode：
-                <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
+              <span>Stripe</span>
+              <p><img src="img/pay02_4.png"><i>Stripe線上金流</i></p>
+              <p>是線上金流整合平台，提供Visa、Master、JCB、American Express、Discover、銀聯卡（借記卡），銀聯雙幣信用卡（美金與人民幣），支付寶等各種支付方式，以美金結匯。使用此一方式需一次繳清課程款項，如遇信用卡刷卡額度問題，需要使用多種付款方式，請聯繫我們。</p>
+              
+
+              <div class="globalContent">
+                <div id='stripe_boxs'>
+                  <section class="container-lg">
+                    
+                    <div class="cell example example1">
+                      <form>
+                        <fieldset>
+                          <div class="row">
+                            <label for="example1-name" data-tid="elements_examples.form.name_label">Name</label>
+                            <input id="example1-name" data-tid="elements_examples.form.name_placeholder" type="text" placeholder="Jane Doe" required="" autocomplete="name">
+                          </div>
+                          <div class="row">
+                            <label for="example1-email" data-tid="elements_examples.form.email_label">Email</label>
+                            <input id="example1-email" data-tid="elements_examples.form.email_placeholder" type="email" placeholder="janedoe@gmail.com" required="" autocomplete="email">
+                          </div>
+                          <div class="row">
+                            <label for="example1-phone" data-tid="elements_examples.form.phone_label">Phone</label>
+                            <input id="example1-phone" data-tid="elements_examples.form.phone_placeholder" type="tel" placeholder="(941) 555-0123" required="" autocomplete="tel">
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <div class="row">
+                            <div id="example1-card"></div>
+                          </div>
+                        </fieldset>
+                        <button class='s_btn' type="submit" data-tid="elements_examples.form.pay_button">Pay $25</button>
+                        <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                        <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"></path>
+                        <path class="glyph" fill="#FFF" d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"></path>
+                        </svg>
+                        <span class="message"></span></div>
+                      </form>
+
+                      <div class="success">
+                        <div class="icon">
+                          <svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <circle class="border" cx="42" cy="42" r="40" stroke-linecap="round" stroke-width="4" stroke="#000" fill="none"></circle>
+                          <path class="checkmark" stroke-linecap="round" stroke-linejoin="round" d="M23.375 42.5488281 36.8840688 56.0578969 64.891932 28.0500338" stroke-width="4" stroke="#000" fill="none"></path>
+                          </svg>
+                        </div>
+                        <h3 class="title" data-tid="elements_examples.success.title">Payment successful</h3>
+                        <p class="message"><span data-tid="elements_examples.success.message">Thanks for trying Stripe Elements. No money was charged, but we generated a token: </span><span class="token">tok_189gMN2eZvKYlo2CwTBv9KKh</span></p>
+                        <a class="reset" href="#">
+                          <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <path fill="#000000" d="M15,7.05492878 C10.5000495,7.55237307 7,11.3674463 7,16 C7,20.9705627 11.0294373,25 16,25 C20.9705627,25 25,20.9705627 25,16 C25,15.3627484 24.4834055,14.8461538 23.8461538,14.8461538 C23.2089022,14.8461538 22.6923077,15.3627484 22.6923077,16 C22.6923077,19.6960595 19.6960595,22.6923077 16,22.6923077 C12.3039405,22.6923077 9.30769231,19.6960595 9.30769231,16 C9.30769231,12.3039405 12.3039405,9.30769231 16,9.30769231 L16,12.0841673 C16,12.1800431 16.0275652,12.2738974 16.0794108,12.354546 C16.2287368,12.5868311 16.5380938,12.6540826 16.7703788,12.5047565 L22.3457501,8.92058924 L22.3457501,8.92058924 C22.4060014,8.88185624 22.4572275,8.83063012 22.4959605,8.7703788 C22.6452866,8.53809377 22.5780351,8.22873685 22.3457501,8.07941076 L22.3457501,8.07941076 L16.7703788,4.49524351 C16.6897301,4.44339794 16.5958758,4.41583275 16.5,4.41583275 C16.2238576,4.41583275 16,4.63969037 16,4.91583275 L16,7 L15,7 L15,7.05492878 Z M16,32 C7.163444,32 0,24.836556 0,16 C0,7.163444 7.163444,0 16,0 C24.836556,0 32,7.163444 32,16 C32,24.836556 24.836556,32 16,32 Z"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
               </div>
+
+
               
               <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
             </div>
@@ -479,15 +549,19 @@
             </div>
           </div>
 
+          <!-- venmo -->
           <div class='pay_info'>
             <div class='p_info_box'>
-              <span>支付寶</span>
-              <p>因為有匯率浮動問題，需要使用支付寶或微信支付的學員，請來信索取支付寶/微信支付收款QRcode。匯率以索取QRcode當天匯率中價來計算。</p>
-              <div class='pay_mail'>請留下信箱，索取QRcode：
-                <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
+              <span>Venmo 系統支付</span>
+              <div class='pay_mail'>
+                <b>付款操作方式：</b>
+                  </br><i>01 /</i> 進入您的手機Venmo App，點選右上角付款圖示。
+                  </br><i>02 /</i> 在Pay or Request的地方輸入：@PointBarReview 或是 payment@pointbarreview.com。
+                  </br><i>03 /</i> 輸入顯示于本頁面上購物車上的總金額，並在備註欄寫上您的Point ID (可在您的Account setting中或是註冊信中看到), 並且按【Pay】。
+                  </br><i>04 /</i> 將您收到的venmo確認畫面或是郵件轉寄到 payment@pointbarreview.com 信箱，或是截圖傳給Point 小助手。 我們將于24小時內確認付款狀態並寄送確認信件。
               </div>
               
-              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將透過Venmo線上金流系統於三天內支付款項。</p>
             </div>
 
             <div class='p_info_box'>
@@ -508,6 +582,12 @@
 
 
     <footer>All rights reserved. © 2018 Point Bar Review 得點國際顧問有限公司</footer>
+
+    <!-- Simple localization script for Stripe's examples page. -->
+    <script src="js/l10n.js" data-rel-js></script>
+
+    <!-- Scripts for each example: -->
+    <script src="js/example1.js" data-rel-js></script>
 
   </body>
 </html>

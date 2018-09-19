@@ -592,8 +592,11 @@
           }
         }
 
-        @include range-width(0, 550px) {
+        @include range-width(325px, 550px) {
           width: calc(100% / 2 - 20px * 1 / 2);
+          margin-bottom: 10px;
+          height: 60px;
+
 
           &:nth-child(2n+1) {
             margin-right: 10px;
@@ -605,6 +608,23 @@
 
           &:nth-child(n+3) {
             margin-top: 10px;
+          }
+        }
+
+        @include range-width(0, 325px) {
+          width: 100%;
+          margin-bottom: 20px;
+
+          &:nth-child(2n+1) {
+            margin-right: 0;
+          }
+
+          &:nth-child(2n+2) {
+            margin-left: 0;
+          }
+
+          &:nth-child(n+3) {
+            margin-top: 0;
           }
         }
 
@@ -746,8 +766,30 @@
             img {
               display: inline-block;
               width: 100%;
-              max-width: 60px;
+              max-width: 175px;
               margin-right: 20px;
+            }
+
+            i {
+              display: inline-block;
+              font-style: 16px;
+              line-height: 49px;
+              color: rgba(57, 17, 120, .8);
+              font-style: normal;
+
+              @include range-width(0, 450px) {
+                line-height: 29px;
+              }
+
+              &:before {
+                display: inline-block;
+                content: '|';
+                padding-right: 20px;
+
+                @include range-width(0, 450px) {
+                  display: none;
+                }
+              }
             }
 
             &.ch_ok {
@@ -813,6 +855,10 @@
             @include border-radius(3px);
             float: right;
             background-color: rgba(69, 70, 67, .3);
+
+            @include range-width(0, 450px) {
+              width: 100%;
+            }
 
             &.pb_ok {
               cursor: pointer;
