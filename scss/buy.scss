@@ -751,6 +751,17 @@
                 color: rgba(57, 17, 120, .8);
               }
             }
+
+            div {
+              display: inline-block;
+              width: 100%;
+              
+              .vpic {
+                display: inline-block;
+                width: 100%;
+                max-width: 124px;
+              }
+            }
           }
 
           p {
