@@ -755,7 +755,7 @@
             div {
               display: inline-block;
               width: 100%;
-              
+
               .vpic {
                 display: inline-block;
                 width: 100%;
@@ -883,6 +883,31 @@
 
             &:focus {
               outline: 0;
+            }
+          }
+
+          .st_btn {
+            display: inline-block;
+            width: 100%;
+            padding-top: 30px;
+
+            .s_btn {
+              display: inline-block;
+              padding: 10px;
+              cursor: pointer;
+              outline: 0;
+              @include border-radius(2px);
+              background-color: rgba(92, 103, 225, 1.00);
+              color: white;
+              font-size: 18px;
+              font-weight: 600;
+              text-decoration: none;
+              margin-right: 10px;
+              @include transition(all .3s);
+
+              &:hover, &:active, &.sa {
+                background-color: rgba(53, 138, 199, 1.00);
+              } 
             }
           }
         }
@@ -1076,5 +1101,14 @@
   }
 }
 
+
+.globalContent {
+  display: none;
+
+  &.show {
+    display: inline-block;
+    width: 100%;
+  }
+}
 
 

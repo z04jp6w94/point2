@@ -10,4 +10,10 @@ $(function () {
     $(this).addClass ('active').parent ().siblings ().find ('a').removeClass ('active');
     $('.pay .pay_info').removeClass ('show').eq ($(this).parent ().index ()).addClass ('show');
   });
+
+  $('.s_btn').click(function() {
+    $(this).addClass('sa');
+    $('.globalContent').removeClass('show')
+    $('div.' + $(this).attr('data')).addClass('show');
+  });
 });
