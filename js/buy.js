@@ -11,9 +11,9 @@ $(function () {
     $('.pay .pay_info').removeClass ('show').eq ($(this).parent ().index ()).addClass ('show');
   });
 
-  $('.s_btn').click(function() {
+  $('.st_btn > .s_btn').click(function() {
     $(this).addClass('sa');
-    $('.globalContent').removeClass('show')
-    $('div.' + $(this).attr('data')).addClass('show');
+    $('.pay_info .globalContent').removeClass('show')
+    $('.pay_info .globalContent.' + $(this).attr('data')).addClass('show');
   });
 });
