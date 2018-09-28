@@ -343,36 +343,45 @@
         <b data-i='4'>付款詳情</b>
         <div class='pay'>
 
+          <!-- zelle -->
           <div class='pay_boxs'>
-            <a><img src="img/pay01.png"></a>
+            <a class='active'><img src="img/pay01.png"></a>
           </div>
 
+          <!-- stripe -->
           <div class='pay_boxs'>
-            <a><img src="img/pay03.png"></a>
+            <a><img src="img/pay06.png"></a>
           </div>
 
-          <div class='pay_boxs'>
-            <a><img src="img/pay04.png"></a>
-          </div>
-
+          <!-- 智付寶 -->
           <div class='pay_boxs'>
             <a><img src="img/pay05.png"></a>
           </div>
 
-          <div class='pay_boxs'>
-            <a><img src="img/pay02_2.png"></a>
-          </div>
-          
-          <div class='pay_boxs'>
-            <a class='active'><img src="img/pay06.png"></a>
-          </div>
-
+          <!-- venmo -->
           <div class='pay_boxs'>
             <a><img src="img/pay07.png"></a>
           </div>
 
+          <!-- ATM -->
+          <div class='pay_boxs'>
+            <a><img src="img/pay03.png"></a>
+          </div>
+
+          <!-- <div class='pay_boxs'>
+            <a><img src="img/pay04.png"></a>
+          </div> -->
+        
+          <!-- <div class='pay_boxs'>
+            <a><img src="img/pay02_2.png"></a>
+          </div> -->
+          
+          
+
+          
+
           <!-- zelle -->
-          <div class='pay_info'>
+          <div class='pay_info show'>
             <div class='p_info_box'>
               <span>Zelle 系統支付</span>
               <p>只要您擁有美國各大銀行帳號，可以直接用您使用的銀行app轉帳免手續費，可支援的銀行包含有：Bank of America, Chase, Citi, Capital One, U.S. Bank, Bank of the West, Wells Fargo, etc. 其他更多加入Zelle的銀行請參見：
@@ -397,88 +406,8 @@
             </div>
           </div>
 
-          <!-- 支付寶 -->
-          <div class='pay_info'>
-            <div class='p_info_box'>
-              <span>支付寶</span>
-              <p>因為有匯率浮動問題，需要使用支付寶或微信支付的學員，請來信索取支付寶/微信支付收款QRcode。匯率以索取QRcode當天匯率中價來計算。</p>
-              <div class='pay_mail'>請留下信箱，索取QRcode：
-                <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
-              </div>
-              
-              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以支付寶線上金流系統支付款項。</p>
-            </div>
-
-            <div class='p_info_box'>
-              <button>確認結帳</button>
-              <b>USD 395</b>
-            </div>
-          </div>
-
-          <!-- 微信支付 -->
-          <div class='pay_info'>
-            <div class='p_info_box'>
-              <span>微信支付</span>
-              <p>因為有匯率浮動問題，需要使用支付寶或微信支付的學員，請來信索取支付寶/微信支付收款QRcode。匯率以索取QRcode當天匯率中價來計算。</p>
-              <div class='pay_mail'>請留下信箱，索取QRcode：
-                <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
-              </div>
-              
-              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以線微信支付線上金流系統支付款項。</p>
-            </div>
-
-            <div class='p_info_box'>
-              <button>確認結帳</button>
-              <b>RMB 395</b>
-            </div>
-          </div>
-
-          <!-- ATM -->
-          <div class='pay_info'>
-            <div class='p_info_box'>
-              <span>ATM/Web ATM 轉帳 （僅限具有台灣的銀行帳號者使用）</span>
-              <p>
-                得點國際顧問有限公司
-                </br>銀行帳號：中國信託 (822)772540203954
-                </br>匯款後請來信至 <a href="mailto:payment@pointbarreview.com">payment@pointbarreview.com</a> 告知匯款帳號後五碼，我們確認後將於24小時內確認付款狀態並寄送確認信件。
-              </p>
-
-              <div class='pay_mail'>請輸入匯款帳戶後五碼：
-                <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
-              </div>
-
-              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
-            </div>
-
-            <div class='p_info_box'>
-              <button>確認結帳</button>
-              <b>NTD 395</b>
-            </div>
-          </div>
-
-          <!-- 智付寶 -->
-          <div class='pay_info'>
-            <div class='p_info_box'>
-              <span>智付寶</span>
-              <p><img src="img/pay02_3.png"><i>智付寶線上金流</i></p>
-
-              <div class='pay_mail'>
-                <b>付款操作方式：</b>
-                  </br><i>01 /</i> 智付通線上金流系統提供台灣信用卡（Visa, Master, JCB）線上刷卡功能，同時也提供台灣的超商條碼繳費功能，皆以新台幣結匯。
-                  </br><i>02 /</i> 如果您欲選擇以這些付款方式，請勾選下面的方格，按下確認結帳後，網站將引導您跳轉至智付通線上金流系統支付款項，以頁面上的新台幣價格支付。
-              </div>
-
-              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，並同意馬上經由智付寶線上金流系統結帳。</p>
-            </div>
-
-            <div class='p_info_box'>
-              <a class='aa pb_ok' href='buy01.html'>確認結帳</a>
-              <b>NTD 395</b>
-            </div>
-          </div>
-
           <!-- stripe -->
-          <div class='pay_info show'>
+          <div class='pay_info'>
             <div class='p_info_box'>
               <span>Stripe</span>
               <p><img src="img/pay02_4.png"><i>Stripe線上金流</i></p>
@@ -577,6 +506,27 @@
             </div>
           </div>
 
+          <!-- 智付寶 -->
+          <div class='pay_info'>
+            <div class='p_info_box'>
+              <span>智付寶</span>
+              <p><img src="img/pay02_3.png"><i>智付寶線上金流</i></p>
+
+              <div class='pay_mail'>
+                <b>付款操作方式：</b>
+                  </br><i>01 /</i> 智付通線上金流系統提供台灣信用卡（Visa, Master, JCB）線上刷卡功能，同時也提供台灣的超商條碼繳費功能，皆以新台幣結匯。
+                  </br><i>02 /</i> 如果您欲選擇以這些付款方式，請勾選下面的方格，按下確認結帳後，網站將引導您跳轉至智付通線上金流系統支付款項，以頁面上的新台幣價格支付。
+              </div>
+
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，並同意馬上經由智付寶線上金流系統結帳。</p>
+            </div>
+
+            <div class='p_info_box'>
+              <a class='aa pb_ok' href='buy01.html'>確認結帳</a>
+              <b>NTD 395</b>
+            </div>
+          </div>
+
           <!-- venmo -->
           <div class='pay_info'>
             <div class='p_info_box'>
@@ -598,6 +548,73 @@
               <b>NTD 395</b>
             </div>
           </div>
+
+          <!-- ATM -->
+          <div class='pay_info'>
+            <div class='p_info_box'>
+              <span>ATM/Web ATM 轉帳 （僅限具有台灣的銀行帳號者使用）</span>
+              <p>
+                得點國際顧問有限公司
+                </br>銀行帳號：中國信託 (822)772540203954
+                </br>匯款後請來信至 <a href="mailto:payment@pointbarreview.com">payment@pointbarreview.com</a> 告知匯款帳號後五碼，我們確認後將於24小時內確認付款狀態並寄送確認信件。
+              </p>
+
+              <div class='pay_mail'>請輸入匯款帳戶後五碼：
+                <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
+              </div>
+
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以ATM轉帳支付款項。</p>
+            </div>
+
+            <div class='p_info_box'>
+              <button>確認結帳</button>
+              <b>NTD 395</b>
+            </div>
+          </div>
+
+          <!-- 支付寶 -->
+          <!-- div class='pay_info'>
+            <div class='p_info_box'>
+              <span>支付寶</span>
+              <p>因為有匯率浮動問題，需要使用支付寶或微信支付的學員，請來信索取支付寶/微信支付收款QRcode。匯率以索取QRcode當天匯率中價來計算。</p>
+              <div class='pay_mail'>請留下信箱，索取QRcode：
+                <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
+              </div>
+              
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以支付寶線上金流系統支付款項。</p>
+            </div>
+
+            <div class='p_info_box'>
+              <button>確認結帳</button>
+              <b>USD 395</b>
+            </div>
+          </div> -->
+
+          <!-- 微信支付 -->
+          <!-- <div class='pay_info'>
+            <div class='p_info_box'>
+              <span>微信支付</span>
+              <p>因為有匯率浮動問題，需要使用支付寶或微信支付的學員，請來信索取支付寶/微信支付收款QRcode。匯率以索取QRcode當天匯率中價來計算。</p>
+              <div class='pay_mail'>請留下信箱，索取QRcode：
+                <input class='pay_mail_in' type="text" placeholder='請輸入正確mail格式' >
+              </div>
+              
+              <p class='ch_ok'><input id="checkBox" type="checkbox">我瞭解如何支付款項，將於三天內以線微信支付線上金流系統支付款項。</p>
+            </div>
+
+            <div class='p_info_box'>
+              <button>確認結帳</button>
+              <b>RMB 395</b>
+            </div>
+          </div> -->
+
+          
+
+          
+
+          
+
+          
         
         </div>
 
